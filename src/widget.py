@@ -1,4 +1,3 @@
-from typing import Union
 from masks import get_mask_card_number
 
 
@@ -26,5 +25,3 @@ def get_date(date: str) -> str:
         month = date[5:7]
         day = date[8:10]
     return f'{day}.{month}.{year}'
-
-
