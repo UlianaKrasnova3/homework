@@ -20,3 +20,11 @@ def mask_account_card(account_card: str) -> str:
     return mask
 
 
+def get_date(date: str) -> str:
+    for item in date:
+        year = date[:4]
+        month = date[5:7]
+        day = date[8:10]
+    return f'{day}.{month}.{year}'
+
+
