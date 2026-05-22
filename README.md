@@ -8,13 +8,13 @@
 
 1. Клонируйте репозиторий:
 ```
-git clone https://github.com/username/myblog.git
+git@github.com:UlianaKrasnova3/homework.git
+
+или
+
+https://github.com/UlianaKrasnova3/homework.git
 ```
 
-2. Установите зависимости:
-```
-pip install -r requirements.txt
-```
 
 
 ## Использование:
