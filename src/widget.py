@@ -2,6 +2,9 @@ from masks import get_mask_card_number, get_mask_account
 
 
 def mask_account_card(account_card: str) -> str:
+    '''
+    Функция возвращает маску номера карты и названия
+    '''
     for item in account_card:
         mask = ''
         if account_card[:4] == 'Счет':
@@ -20,6 +23,9 @@ def mask_account_card(account_card: str) -> str:
 
 
 def get_date(date: str) -> str:
+    '''
+    Функция форматирует дату
+    '''
     for item in date:
         year = date[:4]
         month = date[5:7]
