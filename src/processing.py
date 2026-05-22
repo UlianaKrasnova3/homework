@@ -16,5 +16,5 @@ def sort_by_date(list_of_dicts: list, user_reverse: bool = True) -> list:
     '''
     Функция возвращает новый список, отсортированный по дате
     '''
-    sorted_list = sorted(list_of_dicts, key=lambda x: x['date'], reverse=user_reverse)
+    sorted_list = sorted(list_of_dicts, key = lambda x: x['date'], reverse = user_reverse)
     return sorted_list
