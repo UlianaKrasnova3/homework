@@ -1,7 +1,6 @@
-from src.widget import mask_account_card, get_date
-from src.masks import get_mask_card_number, get_mask_account
 import pytest
 
+from src.widget import get_date, mask_account_card
 
 
 @pytest.mark.parametrize('value, expected', [
@@ -27,5 +26,3 @@ def test_mask_account_card(value, expected):
 ])
 def test_get_date(value, expected):
     assert get_date(value) == expected
-
-

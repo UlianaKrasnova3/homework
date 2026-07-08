@@ -1,4 +1,4 @@
-from src.masks import get_mask_card_number, get_mask_account
+from src.masks import get_mask_account, get_mask_card_number
 
 
 def mask_account_card(account_card: str) -> str:
@@ -20,14 +20,14 @@ def mask_account_card(account_card: str) -> str:
                 mask = card_name + ' ' + mask_card_number
         return mask
     except UnboundLocalError:
-        print("Введен некорректный номер")
+        return "Введен некорректный номер"
 
 
 def get_date(date: str) -> str:
     '''
     Функция форматирует дату
     '''
-    def date_separator(String: str, separator: str):
+    def date_separator(String: str, separator: str) -> str:
         try:
             first_index = String.index(separator)
             second_index = String.index(separator, first_index + 1)
