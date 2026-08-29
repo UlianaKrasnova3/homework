@@ -1,4 +1,4 @@
-from src.generators import filter_by_currency, transaction_descriptions, card_number_generator
+from src.generators import card_number_generator, filter_by_currency, transaction_descriptions
 
 
 def test_filter_by_currency(transactions, transactions_2):
@@ -105,8 +105,4 @@ def test_card_number_generator():
     assert (next(generator_3)) == '0000 0000 0001 2339'
     assert (next(generator_3)) == '0000 0000 0001 2340'
     generator_4 = card_number_generator(12345678, 12345678)
-    try:
-        next(generator_2)
-        assert '0000 0000 1234 5678'
-    except StopIteration:
-        pass
+    assert (next(generator_4)) == '0000 0000 1234 5678'
