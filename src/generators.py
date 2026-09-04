@@ -1,4 +1,10 @@
-def filter_by_currency(list_of_dicts, currency):
+from typing import Generator
+
+def my_generator() -> Generator[int, None, None]:
+    yield 1
+
+
+def filter_by_currency(list_of_dicts: list, currency: str) -> Generator:
     '''
     Генераторная функция, которая возвращает итератор,
     поочередно выдающий транзакции,
@@ -11,7 +17,7 @@ def filter_by_currency(list_of_dicts, currency):
         i += 1
 
 
-def transaction_descriptions(list_of_dicts):
+def transaction_descriptions(list_of_dicts: list) -> Generator:
     '''
     Функция принимает список словарей с транзакциями
     и возвращает описание каждой операции по очереди
@@ -22,7 +28,7 @@ def transaction_descriptions(list_of_dicts):
         i += 1
 
 
-def card_number_generator(start, stop):
+def card_number_generator(start: int, stop: int) -> Generator:
     '''
     Функция генерирует номера карт в заданном диапазоне
     '''
