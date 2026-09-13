@@ -1,7 +1,8 @@
 import os
-from dotenv import load_dotenv
-import requests
 from unittest.mock import patch
+
+import requests
+from dotenv import load_dotenv
 
 load_dotenv()
 
