@@ -12,8 +12,10 @@ def fin_transaction(json_file_name: str) -> list:
 
     except FileNotFoundError:
         print("Файл не найден")
+
         return []
 
     except json.JSONDecodeError:
         print("Ошибка декодирования JSON")
+
         return []
