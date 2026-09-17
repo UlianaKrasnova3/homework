@@ -1,7 +1,10 @@
 import json
+import logging
 import os
 
-import logging
+logs_path = 'logs'
+
+os.makedirs(logs_path, exist_ok=True)
 
 logger = logging.getLogger("utils")
 logger.setLevel(logging.DEBUG)
