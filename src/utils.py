@@ -10,5 +10,10 @@ def fin_transaction(json_file_name: str) -> list:
             list_fin_transaction = json.load(f)
         return list_fin_transaction
 
-    except Exception as e:
+    except FileNotFoundError:
+        print("Файл не найден")
+        return []
+
+    except json.JSONDecodeError:
+        print("Ошибка декодирования JSON")
         return []
